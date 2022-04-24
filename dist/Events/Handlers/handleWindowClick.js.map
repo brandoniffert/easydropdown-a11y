@@ -1,0 +1,1 @@
+{"version":3,"file":"handleWindowClick.js","sourceRoot":"","sources":["../../../src/Events/Handlers/handleWindowClick.ts"],"names":[],"mappings":";;AAEA,SAAS,iBAAiB,CAAC,CAAC,EAAE,EAAqC;QAApC,gBAAK,EAAE,oBAAO,EAAE,YAAG;IAC9C,IAAI,CAAC,KAAK,CAAC,MAAM;QAAE,OAAO;IAE1B,OAAO,CAAC,KAAK,EAAE,CAAC;IAEhB,GAAG,CAAC,MAAM,CAAC,IAAI,EAAE,CAAC;AACtB,CAAC;AAED,kBAAe,iBAAiB,CAAC"}

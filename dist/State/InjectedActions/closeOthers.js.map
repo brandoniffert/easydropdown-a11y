@@ -1,0 +1,1 @@
+{"version":3,"file":"closeOthers.js","sourceRoot":"","sources":["../../../src/State/InjectedActions/closeOthers.ts"],"names":[],"mappings":";;AAEA,SAAS,WAAW,CAAC,YAA0B,EAAE,KAAqB;IAClE,KAAuB,UAAK,EAAL,eAAK,EAAL,mBAAK,EAAL,IAAK,EAAE;QAAzB,IAAM,QAAQ,cAAA;QACf,IAAI,QAAQ,KAAK,YAAY;YAAE,QAAQ,CAAC,OAAO,CAAC,KAAK,EAAE,CAAC;KAC3D;AACL,CAAC;AAED,kBAAe,WAAW,CAAC"}

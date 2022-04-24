@@ -1,0 +1,1 @@
+{"version":3,"file":"Element.matches.js","sourceRoot":"","sources":["../../../src/Shared/Polyfills/Element.matches.ts"],"names":[],"mappings":"AAAA,IAAI,CAAC,OAAO,CAAC,SAAS,CAAC,OAAO,EAAE;IAC5B,OAAO,CAAC,SAAS,CAAC,OAAO,GAAI,OAAO,CAAC,SAAiB,CAAC,iBAAiB,CAAC;CAC5E"}
