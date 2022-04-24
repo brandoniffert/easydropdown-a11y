@@ -21,9 +21,8 @@ const root = (state: State, classNames: ClassNames) => {
     return (`
         <div
             class="${className}"
-            role="widget combobox"
             aria-haspopup="listbox"
-            ${state.isOpen ? 'aria-expanded="true"' : ''}
+            ${state.isOpen ? 'aria-expanded="true"' : 'aria-expanded="false"'}
             ${state.isRequired ? 'aria-required="true"' : ''}
             ${state.isDisabled ? 'aria-disabled="true"' : ''}
             ${state.isInvalid ? 'aria-invalid="true"' : ''}
