@@ -19,8 +19,7 @@ function body(state: State, classNames: ClassNames): string {
         <div
             class="${className}"
             data-ref="body"
-            role="listbox"
-            ${state.isOpen ? '' : 'aria-hidden'}
+            aria-hidden="true"
         >
             <div class="${classNames.itemsList}"
                 data-ref="itemsList"

@@ -1,36 +1,31 @@
-import ClassNames       from '../Config/ClassNames';
-import composeClassName from '../Shared/Util/composeClassName';
-import State            from '../State/State';
+import ClassNames from "../Config/ClassNames";
+import composeClassName from "../Shared/Util/composeClassName";
+import State from "../State/State";
 
-import body from './body';
-import head from './head';
+import body from "./body";
+import head from "./head";
 
 const root = (state: State, classNames: ClassNames) => {
-    const className = composeClassName([
-        classNames.root,
-        [state.isDisabled, classNames.rootDisabled],
-        [state.isInvalid, classNames.rootInvalid],
-        [state.isOpen, classNames.rootOpen],
-        [state.isFocused, classNames.rootFocused],
-        [state.hasValue, classNames.rootHasValue],
-        [state.isOpenAbove, classNames.rootOpenAbove],
-        [state.isOpenBelow, classNames.rootOpenBelow],
-        [state.isUseNativeMode, classNames.rootNative]
-    ]);
+  const className = composeClassName([
+    classNames.root,
+    [state.isDisabled, classNames.rootDisabled],
+    [state.isInvalid, classNames.rootInvalid],
+    [state.isOpen, classNames.rootOpen],
+    [state.isFocused, classNames.rootFocused],
+    [state.hasValue, classNames.rootHasValue],
+    [state.isOpenAbove, classNames.rootOpenAbove],
+    [state.isOpenBelow, classNames.rootOpenBelow],
+    [state.isUseNativeMode, classNames.rootNative],
+  ]);
 
-    return (`
+  return `
         <div
             class="${className}"
-            aria-haspopup="listbox"
-            ${state.isOpen ? 'aria-expanded="true"' : 'aria-expanded="false"'}
-            ${state.isRequired ? 'aria-required="true"' : ''}
-            ${state.isDisabled ? 'aria-disabled="true"' : ''}
-            ${state.isInvalid ? 'aria-invalid="true"' : ''}
         >
             ${head(state, classNames)}
-            ${state.isUseNativeMode ? '' : body(state, classNames)}
+            ${state.isUseNativeMode ? "" : body(state, classNames)}
         </div>
-    `);
+    `;
 };
 
 export default root;

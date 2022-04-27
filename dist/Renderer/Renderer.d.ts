@@ -1,6 +1,6 @@
-import ClassNames from '../Config/ClassNames';
-import State from '../State/State';
-import Dom from './Dom';
+import ClassNames from "../Config/ClassNames";
+import State from "../State/State";
+import Dom from "./Dom";
 declare class Renderer {
     classNames: ClassNames;
     dom: Dom;

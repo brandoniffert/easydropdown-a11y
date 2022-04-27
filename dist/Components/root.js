@@ -13,9 +13,9 @@ var root = function (state, classNames) {
         [state.hasValue, classNames.rootHasValue],
         [state.isOpenAbove, classNames.rootOpenAbove],
         [state.isOpenBelow, classNames.rootOpenBelow],
-        [state.isUseNativeMode, classNames.rootNative]
+        [state.isUseNativeMode, classNames.rootNative],
     ]);
-    return ("\n        <div\n            class=\"" + className + "\"\n            aria-haspopup=\"listbox\"\n            " + (state.isOpen ? 'aria-expanded="true"' : 'aria-expanded="false"') + "\n            " + (state.isRequired ? 'aria-required="true"' : '') + "\n            " + (state.isDisabled ? 'aria-disabled="true"' : '') + "\n            " + (state.isInvalid ? 'aria-invalid="true"' : '') + "\n        >\n            " + head_1.default(state, classNames) + "\n            " + (state.isUseNativeMode ? '' : body_1.default(state, classNames)) + "\n        </div>\n    ");
+    return "\n        <div\n            class=\"" + className + "\"\n        >\n            " + head_1.default(state, classNames) + "\n            " + (state.isUseNativeMode ? "" : body_1.default(state, classNames)) + "\n        </div>\n    ";
 };
 exports.default = root;
 //# sourceMappingURL=root.js.map

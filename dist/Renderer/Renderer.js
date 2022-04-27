@@ -25,7 +25,7 @@ var Renderer = /** @class */ (function () {
         var nextRoot = createDomElementFromHtml_1.default(nextHtml);
         var diffCommand = domDiff_1.default(this.dom.root, nextRoot);
         domPatch_1.default(this.dom.root, diffCommand);
-        if (key === 'selectedIndex') {
+        if (key === "selectedIndex") {
             this.syncSelectWithValue(state.value);
         }
     };
@@ -34,36 +34,35 @@ var Renderer = /** @class */ (function () {
         try {
             this.dom.root.parentElement.replaceChild(this.dom.select, this.dom.root);
         }
-        catch (err) { /**/ }
+        catch (err) {
+            /**/
+        }
     };
     Renderer.prototype.injectSelect = function (selectElement) {
         var parent = selectElement.parentElement;
         var tempSelect = this.dom.select;
         if (!parent)
-            throw new Error('[EasyDropDown] The provided `<select>` element must exist within a document');
+            throw new Error("[EasyDropDown] The provided `<select>` element must exist within a document");
         parent.replaceChild(this.dom.root, selectElement);
         tempSelect.parentElement.replaceChild(selectElement, tempSelect);
         selectElement.className = this.classNames.select;
-        selectElement.setAttribute('aria-hidden', 'true');
-        selectElement.setAttribute('tabindex', '-1');
         this.dom.select = selectElement;
     };
     Renderer.prototype.syncSelectWithValue = function (value) {
         if (this.dom.select.value === value)
             return;
-        var event = new CustomEvent('change', {
-            bubbles: true
+        var event = new CustomEvent("change", {
+            bubbles: true,
         });
         this.dom.select.value = value;
         this.dom.select.dispatchEvent(event);
     };
     Renderer.queryDomRefs = function (dom, keys) {
         if (keys === void 0) { keys = Object.keys(dom); }
-        return keys
-            .reduce(function (localDom, ref) {
+        return keys.reduce(function (localDom, ref) {
             var selector = "[data-ref~=\"" + ref + "\"]";
             var elements = localDom.root.querySelectorAll(selector);
-            if (elements.length < 1 || ref === 'root')
+            if (elements.length < 1 || ref === "root")
                 return localDom;
             var element = elements[0];
             var value = localDom[ref];
